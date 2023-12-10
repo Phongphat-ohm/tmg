@@ -378,6 +378,11 @@ fastify.post("/api/auth", (req, reply) => __awaiter(void 0, void 0, void 0, func
     }
     reply.send(responce);
 }));
+
+fastify.get("/", (req, reply) => {
+    reply.send("Hello this is a my api");
+})
+
 fastify.listen({
     port: 4567
 }, (err, address) => {
